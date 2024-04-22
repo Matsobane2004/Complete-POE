@@ -9,8 +9,11 @@ public class PROGPOE
        Scanner sn = new Scanner(System.in);
        Validations vld = new Validations();
        
+       String FirstName;
+       String LastName;
        String username;
        String password;
+      
        boolean usrn;
        boolean spChar;
        boolean passlng;
@@ -20,10 +23,18 @@ public class PROGPOE
        spChar = false;
        passlng = false;
        capLr = false;
+
+       System.out.println("\tREGISTER\n");
+        
+       System.out.print("Enter your first name : ");
+       FirstName = sn.next();
+       
+       System.out.print("Enter your last name : ");
+       LastName = sn.next();
        
        while(usrn == false )
        {
-        System.out.print("Enter Username : ");
+        System.out.print("\nEnter Username : ");
         username = sn.next();
         
         usrn = vld.CheckUsername(username);
@@ -58,18 +69,16 @@ public class PROGPOE
         {
             System.out.println("Password succefully saved!!\n");
             
+            System.out.println("\tLOGIN\n");
             String logusr;
             String logpass;
-            System.out.print("\nEnter your login Username : ");
+            System.out.print("Enter your login Username : ");
             logusr = sn.next();
             System.out.print("Enter your login Password : ");
             logpass = sn.next();
-                
-        }
-        if(logusr.compareTo(username) == 0)
-            {
-                
-            }
+            
+            System.out.println("\nWelcome back "+ FirstName + " " + LastName + ","+ "it is great to see you again!");
+      
+        }   
     }
-    
 }
