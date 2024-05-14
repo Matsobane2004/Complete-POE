@@ -8,7 +8,7 @@ public class PROGPOE
     {
        Scanner sn = new Scanner(System.in);
        Validations vld = new Validations();
-       
+     
        String FirstName;
        String LastName;
        String username;
@@ -78,7 +78,11 @@ public class PROGPOE
             logpass = sn.next();
             
             System.out.println("\nWelcome back "+ FirstName + " " + LastName + ","+ "it is great to see you again!");
-      
-        }   
+       
+        } 
+             
+        boolean KB;
+        KB = vld.EasyKanban(0);
+        
     }
 }
