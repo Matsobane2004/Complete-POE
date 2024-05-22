@@ -7,8 +7,10 @@ public class PROGPOE
     public static void main(String[] args) 
     {
        Scanner sn = new Scanner(System.in);
-       Validations vld = new Validations();
-     
+      // Login lgn = new Login();
+       
+       Tasks tsk = new Tasks();
+       /*
        String FirstName;
        String LastName;
        String username;
@@ -37,7 +39,7 @@ public class PROGPOE
         System.out.print("\nEnter Username : ");
         username = sn.next();
         
-        usrn = vld.CheckUsername(username);
+        usrn = lgn.CheckUsername(username);
        }
        
        while(spChar == false || passlng == false || capLr == false)
@@ -45,9 +47,9 @@ public class PROGPOE
         System.out.print("Enter Password : ");
         password = sn.next();
        
-        spChar = vld.CheckPassword(password);
-        passlng = vld.CheckLength(password);
-        capLr = vld.CheckCapitalLetter(password);
+        spChar = lgn.CheckPassword(password);
+        passlng = lgn.CheckLength(password);
+        capLr = lgn.CheckCapitalLetter(password);
         
             if(spChar == false)
             {
@@ -70,19 +72,24 @@ public class PROGPOE
             System.out.println("Password succefully saved!!\n");
             
             System.out.println("\tLOGIN\n");
-            String logusr;
-            String logpass;
+        
             System.out.print("Enter your login Username : ");
-            logusr = sn.next();
+            String logusr = sn.next();
             System.out.print("Enter your login Password : ");
-            logpass = sn.next();
+            String logpass = sn.next();
             
             System.out.println("\nWelcome back "+ FirstName + " " + LastName + ","+ "it is great to see you again!");
        
-        } 
-             
+            */
+            
+       //////////PART 2 STARTS HERE!!!!!!////////
+            
         boolean KB;
-        KB = vld.EasyKanban(0);
+        KB = tsk.EasyKanban();
+       // } 
+           
+
+        
         
     }
 }
